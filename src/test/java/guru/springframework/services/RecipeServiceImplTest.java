@@ -13,6 +13,7 @@ import java.util.Set;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
+//Mockito Mocks - Used to test business logic inside service layer.
 public class RecipeServiceImplTest {
 
     RecipeServiceImpl recipeService;
