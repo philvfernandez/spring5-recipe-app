@@ -55,6 +55,7 @@ public class RecipeServiceImpl implements RecipeService {
         return recipeToRecipeCommand.convert(findById(l));
     }
 
+
     @Override
     @Transactional
     public RecipeCommand saveRecipeCommand(RecipeCommand command) {
@@ -65,5 +66,9 @@ public class RecipeServiceImpl implements RecipeService {
         return recipeToRecipeCommand.convert(savedRecipe);
     }
 
+    @Override
+    public void deleteById(Long idToDelete) {
+        recipeRepository.deleteById(idToDelete);
+    }
 
 }
