@@ -14,6 +14,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import static org.junit.Assert.assertEquals;
 
+
+/**
+ * Created by jt on 6/21/17.
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class RecipeServiceIT {
@@ -34,14 +38,14 @@ public class RecipeServiceIT {
 
     @Transactional
     @Test
-    public void testSavedOfDescription() throws  Exception {
+    public void testSaveOfDescription() throws Exception {
         //given
         Iterable<Recipe> recipes = recipeRepository.findAll();
         Recipe testRecipe = recipes.iterator().next();
         RecipeCommand testRecipeCommand = recipeToRecipeCommand.convert(testRecipe);
 
         //when
-        testRecipeCommand.setDirections(NEW_DESCRIPTION);
+        testRecipeCommand.setDescription(NEW_DESCRIPTION);
         RecipeCommand savedRecipeCommand = recipeService.saveRecipeCommand(testRecipeCommand);
 
         //then
