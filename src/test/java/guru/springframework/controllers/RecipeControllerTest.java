@@ -65,6 +65,14 @@ public class RecipeControllerTest {
                 .andExpect(view().name("404error"));
     }
 
+    @Test
+    public void testBadRequest() throws Exception {
+
+        mockMvc.perform(get("/recipe/abcdef/show"))
+                .andExpect(status().isBadRequest())
+                .andExpect(view().name("400error"));
+    }
+
 
     @Test
     public void testGetNewRecipeForm() throws Exception {
