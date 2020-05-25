@@ -68,7 +68,7 @@ public class RecipeController {
         return modelAndView;
     }
 
-    @ResponseStatus(HttpStatus.BAD_REQUEST) //status code 400
+    /* @ResponseStatus(HttpStatus.BAD_REQUEST) //status code 400
     @ExceptionHandler(NumberFormatException.class)
     public ModelAndView handleNumberFormat(Exception e) {
         log.error("Handling Number Format Exception");
@@ -78,6 +78,5 @@ public class RecipeController {
         modelAndView.setViewName("400error");
         modelAndView.addObject("badreqexception", e);
         return modelAndView;
-    }
-
+    } */
 }
