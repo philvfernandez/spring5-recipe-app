@@ -54,7 +54,7 @@ public class IngredientController {
 
         model.addAttribute("uomList", unitOfMeasureService.listAllUoms());
 
-        return "recipe/ingredient/ingredientform";
+        return "recipe/ingredients/ingredientform";
     }
 
     @PostMapping("recipe/{recipeId}/ingredient")
